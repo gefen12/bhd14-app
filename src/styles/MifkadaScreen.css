@@ -1,0 +1,71 @@
+.Mifkada {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(3, auto); 
+  gap: 20px; 
+  text-align: center;
+  align-items: center;
+  justify-items: center; 
+  height: 23vh;
+  width: 36vw;
+  color: white;
+  font-family: 'rubik', sans-serif;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40vh;
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 15px;
+  padding: 20px;
+  padding-right: 6vw;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.item2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
+}
+
+.item2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF4500;
+  transition: width 0.3s ease;
+}
+
+.item3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* For RTL: icon on right, text on left */
+  justify-self: start;
+  gap: 8px;
+  margin-bottom: 12px;
+ direction: rtl; 
+}
+
+.item2:hover .item2::after {
+  width: 100%;
+}
+
+.mifkada-logo {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+@media (max-width: 1300px) {
+  .Mifkada {
+    width: 70vw;
+    min-width: 0;
+    padding-right: 6vw;
+  }
+}

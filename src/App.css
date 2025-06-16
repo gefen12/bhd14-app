@@ -1,0 +1,131 @@
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  direction: rtl;
+}
+.background {
+  background-size: cover;
+  background-position: center;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('./assets/fonts/Rubik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'rubik', sans-serif;
+  text-align: center;
+}
+
+.app {
+  display: absolute;
+  height: 100vh;
+  scroll-behavior:smooth;
+  overflow: hidden;
+  width: 100vw;
+  direction: rtl;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #141110;
+  z-index: 1;
+  /* opacity: 0.9; */
+  opacity: 0.61;
+  backdrop-filter: blur(10px);
+  /* animation: fadeOutOpacity 2s ease-in-out forwards; */
+  /* animation-delay: 1s; */
+}
+
+
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.61;
+  }
+}
+/* .bhd14Graphic {
+  position: absolute;
+  z-index: 2;
+  max-width: 50%;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.25);
+} */
+.footer-signature {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #cccccc;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  z-index: 10;
+  background: none;
+  margin: 0;
+  pointer-events: none;
+}
+
+.bhd14Graphic.animate {
+  animation: moveAndShrink 2s ease-in-out forwards;
+  animation-delay: 1s;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes moveAndShrink {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    top: -10%;
+    transform: translate(-50%, 0) scale(0.25);
+  }
+}
+
+@font-face {
+  font-family: 'rubik-dirt';
+  src: url('./assets/fonts/RubikDirt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.sentence {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'rubik-dirt', sans-serif;
+  opacity: 0.5;
+  user-select: none; 
+  pointer-events: none; 
+}
+/* Responsive adjustments for mobile devices */
+/*  */

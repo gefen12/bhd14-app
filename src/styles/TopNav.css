@@ -1,0 +1,116 @@
+.top-nav {
+position: absolute;
+display: flex;
+justify-content: space-between;
+z-index: 3;
+color: #FF4500;
+font-size: 2.2rem;
+top: 4%;
+width: 75vw;
+left: 12.5%;
+}
+
+.item {
+  position: relative;
+  cursor: pointer;
+  color: #FF4500; 
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bhd14 {
+    cursor: pointer;
+    z-index: 3;
+    width: 9vw; 
+    height: 7vh;
+}
+.bhd14Graphic {
+  cursor: pointer;
+  z-index: 3;
+  width: 135px;   
+  height: 90px;   
+  position: static;
+  left: unset;
+  transform: none;
+  margin-top: -25px;
+}
+
+.item.active {
+  color: white; 
+}
+
+.item:not(.active):hover {
+  transform: scale(1.1); 
+  color: #FF4500; 
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  right: 0; 
+  bottom: 8px; 
+  width: 0;
+  height: 2px;
+  background-color: #FF4500; 
+  transition: width 0.3s ease;
+}
+
+.item.active::after {
+  width: 100%;
+}
+.item:not(.active):hover::after {
+  width: 0; 
+}
+
+.bhd14logo {
+position: absolute;
+top: 3%;
+left: 2.5vw;
+width: 4rem ;
+z-index: 2;
+}
+
+.peleLogo {
+position: absolute; 
+top: 3%;
+right: 2.5vw;
+width: 5.5rem ;
+z-index: 2;
+}
+@media (max-width: 1150px) {
+    .top-nav {
+      font-size: 2rem; 
+      width: 95%; 
+      left: 2.5%; 
+
+    }
+  
+    .bhd14logo, .peleLogo {
+      display: none;
+    }
+
+
+  }
+
+  
+
+  @media (max-width: 480px) {
+    .top-nav {
+      font-size: 1rem; 
+      flex-direction: column; 
+      align-items: center;
+      top: 6%; 
+      width: 100%; 
+      left: 0; 
+    }
+  
+    .item {
+      margin-bottom: 10px; 
+    }
+  
+    .bhd14logo, .peleLogo {
+   
+      width: 3rem; 
+      bottom: 2%; 
+    }
+}
